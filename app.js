@@ -3,6 +3,10 @@ const app = express();
 const path = require('path');
 const PORT = 3030;
 
+/* configuraviones */
+
+app.use(express.static('public'))
+
 /* rutas */
 app.get('/',(req,res) => res.sendFile(path.join(__dirname,'views','home.html')));
 app.get('/about',(req,res) => res.sendFile(path.join(__dirname,'views','about.html')));
